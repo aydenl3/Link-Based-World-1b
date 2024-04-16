@@ -1,0 +1,164 @@
+{
+    "Title": "Retrace",
+    "Credits": "Ayden Le",
+    "InitialLocation": "MainDeck",
+    "Locations": {
+        "MainDeck": {
+            "Body": "MAIN DECK TEXT",
+            "Choices": [
+                {
+                    "Text": "Go Hallway",
+                    "Target": "Hallway"
+                }
+            ]
+        },
+        "Hallway": {
+            "Body": "HALLWAY TEXT",
+            "Choices": [
+                {
+                    "Text": "Go Private Quarters",
+                    "Target": "Quarters"
+                },
+                {
+                    "Text": "Go Loading Dock",
+                    "Target": "LoadingDock"
+                },
+                {
+                    "Text": "Go Facility Lobby",
+                    "Target": "Facility"
+                },
+                {
+                    "Text": "Go Main Deck",
+                    "Target": "MainDeck"
+                },
+                {
+                    "Text": "Example",
+                    "Interact": "The keys sit in the pocket",
+                    "Target":"End",
+                    "Break": true,
+                    "Broken": false,
+                    "Perm":"Key"
+                }
+            ]
+        },
+        "Quarters": {
+            "Body": "QUARTERS TEXT",
+            "Choices": [
+                {
+                    "Text": "Go Hallway",
+                    "Target": "Hallway"
+                }
+            ]
+        },
+        "LoadingDock": {
+            "Body": "LOADING DOCK TEXT",
+            "Choices": [
+                {
+                    "Text": "Go Inner Engine",
+                    "Target": "Engine"
+                },
+                {
+                    "Text": "Go Hallway",
+                    "Target": "Hallway"
+                }
+            ]
+        },
+        "Engine": {
+            "Body": "INNER ENGINE TEXT",
+            "Choices": [
+                {
+                    "Text": "Go End",
+                    "Target": "End",
+                    "Perm": "Key"
+                },
+                {
+                    "Text": "Go Loading Dock",
+                    "Target": "LoadingDock"
+                }
+            ]
+        },
+        "Facility": {
+            "Body": "FACILITY TEXT",
+            "Choices": [
+                {
+                    "Text": "Go Garden",
+                    "Target": "Garden"
+                },
+                {
+                    "Text": "Go Gym",
+                    "Target": "Gym"
+                },
+                {
+                    "Text": "Go Classroom",
+                    "Target": "Classroom"
+                },
+                {
+                    "Text": "Go Hallway",
+                    "Target": "Hallway"
+                }
+            ]
+        },
+        "Garden": {
+            "Body": "GARDEN TEXT",
+            "Choices": [
+                {
+                    "Text": "Go Facility Lobby",
+                    "Target": "Facility"
+                }
+            ]
+        },
+        "Gym": {
+            "Body": "GYM TEXT",
+            "Choices": [
+                {
+                    "Text": "Go Lockers",
+                    "Target": "Lockers"
+                },
+                {
+                    "Text": "Go Facility Lobby",
+                    "Target": "Facility"
+                },
+                {
+                    "Text": "SPEAK TO",
+                    "Interact": "SPEAK TEXT",
+                    "Leave": "LEAVE TEXT",
+                    "Target": "Gym",
+                    "Breakable": true,
+                    "Speak": 1,
+                    "Broken": false
+                }
+            ]
+        },
+        "Lockers": {
+            "Body": "LOCKERS TEXT",
+            "Choices": [
+                {
+                    "Text": "Go Gym",
+                    "Target": "Gym"   
+                },
+                {
+                    "Text": "Manual",
+                    "Interact": "MANUAL TEXT",
+                    "Target": "Lockers",
+                    "Breakable": true,
+                    "Break": true,
+                    "Broken": false,
+                    "Grant": true
+                }
+            ]
+        },
+        "Classroom": {
+            "Body": "CLASSROOM TEXT",
+            "Choices": [
+                {
+                    "Text": "Go Facility Lobby",
+                    "Target": "Facility"
+                }
+
+            ]
+        },
+        "End": {
+            "Body": "END TEXT"
+        }
+    }
+}
