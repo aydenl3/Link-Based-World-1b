@@ -1,19 +1,45 @@
 {
     "Title": "Retrace",
     "Credits": "Ayden Le",
-    "InitialLocation": "MainDeck",
+    "InitialLocation": "Start",
     "Locations": {
-        "MainDeck": {
-            "Body": "MAIN DECK TEXT",
+        "Start": {
+            "Body": "Small pricks of light dance upon a dark sea of void as you gaze out the window above the dashboard of the Deck. <br> <br> 'Kinda looks like dandruff' you think to yourself. <br> You're interrupted by a flashing light at the dashboard, demanding your attention. The engine requires a recalibration. <br>You don't even remember how to do a recalibration, as its been 6 months since basic training. <br> Doesn't look like you have much of a choice though, it's your shift. Maybe your manual has instructions?",
             "Choices": [
                 {
-                    "Text": "Go Hallway",
+                    "Text": "Get Up",
+                    "Target": "MainDeck"
+                }
+            ]
+        },
+        "MainDeck": {
+            "Body": "You glance around the Main Deck. A large dashboard takes up most of the space, forcing everything else to be crammed around it. <br> You would think with this large a budget the most important room in the ship would be better designed. <br> A potted plant rests upon a shelf by the door to the hallway.",
+            "Choices": [
+                {
+                    "Text": "Hallway",
                     "Target": "Hallway"
+                },
+                {
+                    "Text": "Potted Plant",
+                    "Interact": "You don't recognize the plant. Even with three Bio classes, you still can't apply the information you learned there to everyday life. <br> >",
+                    "Target": "MainDeck",
+                    "Breakable": true,
+                    "Break": true,
+                    "Broken": false
+                },
+                {
+                    "Text": "Check Pockets",
+                    "Interact": "You check your pockets for the manual. Of course you don't find it. Who keeps a manual on them at all times? <br> >",
+                    "Target": "MainDeck",
+                    "Breakable": true,
+                    "Break": true,
+                    "Broken": false
+
                 }
             ]
         },
         "Hallway": {
-            "Body": "HALLWAY TEXT",
+            "Body": "The Starboard Hallway connects to the Private Quarters where Cadets sleep, the Loading Dock where cadets work, and the Facility where cadets learn. <br> 'What else is needed in life?' is the reasoning there is no swimming pool. <br> <br> Besides the obvious logistical complications of putting a swimming pool on a spaceship.",
             "Choices": [
                 {
                     "Text": "Go Private Quarters",
@@ -30,28 +56,36 @@
                 {
                     "Text": "Go Main Deck",
                     "Target": "MainDeck"
-                },
-                {
-                    "Text": "Example",
-                    "Interact": "The keys sit in the pocket",
-                    "Target":"End",
-                    "Break": true,
-                    "Broken": false,
-                    "Perm":"Key"
                 }
             ]
         },
         "Quarters": {
-            "Body": "QUARTERS TEXT",
+            "Body": "The Private Quarters are small and cramped. <br> The Academy encourages cadets to be friendly with everyone, since everyone shares the same room. <br> A picture of your cat hangs above your bunk. You have one drawer for personal storage.",
             "Choices": [
                 {
                     "Text": "Go Hallway",
                     "Target": "Hallway"
+                },
+                {
+                    "Text": "Cat Picture",
+                    "Interact": "You miss pebbles. <br> >",
+                    "Target": "Quarters",
+                    "Breakable": true,
+                    "Break": true,
+                    "Broken": false
+                },
+                {
+                    "Text": "Check Drawer",
+                    "Interact": "You check your drawer for the manual. Inside you find only a few changes of clothers, a toothbrush, and a scuffed baseball. <br> As a child you were really excited about space baseball, before you realized that it wouldn't really work. <br> >",
+                    "Target": "Quarters",
+                    "Breakable": true,
+                    "Break": true,
+                    "Broken": false
                 }
             ]
         },
         "LoadingDock": {
-            "Body": "LOADING DOCK TEXT",
+            "Body": "The Loading Dock serves to load and service the ship. Most physical work on the ship is done here. <br> A door on the far side of the dock connects to the Inner Engine.",
             "Choices": [
                 {
                     "Text": "Go Inner Engine",
