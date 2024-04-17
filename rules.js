@@ -37,7 +37,7 @@ class Location extends Scene {
 
             }
         } else {
-            this.engine.addChoice("The end.")
+            this.engine.addChoice("'La Fin'")
         }
     }
 

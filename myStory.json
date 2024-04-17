@@ -42,19 +42,19 @@
             "Body": "The Starboard Hallway connects to the Private Quarters where Cadets sleep, the Loading Dock where cadets work, and the Facility where cadets learn. <br> 'What else is needed in life?' is the reasoning there is no swimming pool. <br> <br> Besides the obvious logistical complications of putting a swimming pool on a spaceship.",
             "Choices": [
                 {
-                    "Text": "Go Private Quarters",
+                    "Text": "Private Quarters",
                     "Target": "Quarters"
                 },
                 {
-                    "Text": "Go Loading Dock",
+                    "Text": "Loading Dock",
                     "Target": "LoadingDock"
                 },
                 {
-                    "Text": "Go Facility Lobby",
+                    "Text": "Facility Lobby",
                     "Target": "Facility"
                 },
                 {
-                    "Text": "Go Main Deck",
+                    "Text": "Main Deck",
                     "Target": "MainDeck"
                 }
             ]
@@ -63,7 +63,7 @@
             "Body": "The Private Quarters are small and cramped. <br> The Academy encourages cadets to be friendly with everyone, since everyone shares the same room. <br> A picture of your cat hangs above your bunk. You have one drawer for personal storage.",
             "Choices": [
                 {
-                    "Text": "Go Hallway",
+                    "Text": "Hallway",
                     "Target": "Hallway"
                 },
                 {
@@ -88,74 +88,107 @@
             "Body": "The Loading Dock serves to load and service the ship. Most physical work on the ship is done here. <br> A door on the far side of the dock connects to the Inner Engine.",
             "Choices": [
                 {
-                    "Text": "Go Inner Engine",
+                    "Text": "Inner Engine",
                     "Target": "Engine"
                 },
                 {
-                    "Text": "Go Hallway",
+                    "Text": "Hallway",
                     "Target": "Hallway"
                 }
             ]
         },
         "Engine": {
-            "Body": "INNER ENGINE TEXT",
+            "Body": "The Inner Engine is a tiny stuffy room full of metal pipes and glass tubes. Lots of little buttons and switches blink contently. <br> To recalibrate the engine you'll need a manual.",
             "Choices": [
                 {
-                    "Text": "Go End",
+                    "Text": "Recalibrate",
                     "Target": "End",
                     "Perm": "Key"
                 },
                 {
-                    "Text": "Go Loading Dock",
+                    "Text": "Loading Dock",
                     "Target": "LoadingDock"
+                },
+                {
+                    "Text": "Try anyway",
+                    "Interact": "You fiddle around with the engine, and have no idea what your doing. It doesn't recalibrate. <br> >",
+                    "Target": "Engine",
+                    "Breakable": true,
+                    "Break": true,
+                    "Broken": false
+
                 }
             ]
         },
         "Facility": {
-            "Body": "FACILITY TEXT",
+            "Body": "The Facility Lobby is quiet, and questionably decorated with ugly green sofas. Several large portraits peer down at you. <br> Three doors connect to the lobby, each labled in large white letters. ",
             "Choices": [
                 {
-                    "Text": "Go Garden",
+                    "Text": "Garden",
                     "Target": "Garden"
                 },
                 {
-                    "Text": "Go Gym",
+                    "Text": "Gym",
                     "Target": "Gym"
                 },
                 {
-                    "Text": "Go Classroom",
+                    "Text": "Classroom",
                     "Target": "Classroom"
                 },
                 {
-                    "Text": "Go Hallway",
+                    "Text": "Hallway",
                     "Target": "Hallway"
+                },
+                {
+                    "Text": "Portraits",
+                    "Interact": "Faces of people who died decades before you were born peer down at you disaprovingly. <br> The fact that something still remains to remind the future that they existed is somewhat comforting to you. <br> >",
+                    "Target": "Facility",
+                    "Breakable": true,
+                    "Break": true,
+                    "Broken": false
+                },
+                {
+                    "Text": "Check Sofa Cushions",
+                    "Interact": "You're scared to put your hand under the cusion. Maybe you'll come back here to look if all else fails. <br> >",
+                    "Target": "Facility",
+                    "Breakable": true,
+                    "Broken": false
                 }
             ]
         },
         "Garden": {
-            "Body": "GARDEN TEXT",
+            "Body": "The Garden is locked. Through the tainted window you see your future dinner slowly growing under the new Biolite",
             "Choices": [
                 {
-                    "Text": "Go Facility Lobby",
+                    "Text": "Facility Lobby",
                     "Target": "Facility"
+                },
+                {
+                    "Text": "Try Door",
+                    "Interact": "You didn't believe me when I said it was locked? <br> >",
+                    "Leave": "This isnt productive, you're not Houdini. Go somewhere else <br> >",
+                    "Target": "Garden",
+                    "Breakable": true,
+                    "Speak": 2,
+                    "Broken": false
                 }
             ]
         },
         "Gym": {
-            "Body": "GYM TEXT",
+            "Body": "The Gym is a spacious room with state of the art equipment. It's your favorite activity that you can do in space. Working out is important when there isn't any gravity. <br> This was the only room thouroughly shown and advertised when you were applying. A fellow Cadet is running on the treadmill. <br> He has headphones on, and you've forgotten his name.",
             "Choices": [
                 {
-                    "Text": "Go Lockers",
+                    "Text": "Lockers",
                     "Target": "Lockers"
                 },
                 {
-                    "Text": "Go Facility Lobby",
+                    "Text": "Facility Lobby",
                     "Target": "Facility"
                 },
                 {
-                    "Text": "SPEAK TO",
-                    "Interact": "SPEAK TEXT",
-                    "Leave": "LEAVE TEXT",
+                    "Text": "Speak to Cadet",
+                    "Interact": "You try to get his attention, but he doesn't hear you. <br> >",
+                    "Leave": "'Dang! leave me alone bro! I'm trying to run here!' <br> He remarks, putting back on the headphones without letting you say a word. <br> > ",
                     "Target": "Gym",
                     "Breakable": true,
                     "Speak": 1,
@@ -164,15 +197,15 @@
             ]
         },
         "Lockers": {
-            "Body": "LOCKERS TEXT",
+            "Body": "You walk to the back of the room, careful not to bother the runner. You open your locker, and lo and behold, your manual is sitting there.",
             "Choices": [
                 {
-                    "Text": "Go Gym",
+                    "Text": "Gym",
                     "Target": "Gym"   
                 },
                 {
-                    "Text": "Manual",
-                    "Interact": "MANUAL TEXT",
+                    "Text": "Grab Manual",
+                    "Interact": "The manual is crisp and fresh. You never use this thing. Well, until now. <br> >",
                     "Target": "Lockers",
                     "Breakable": true,
                     "Break": true,
@@ -182,7 +215,7 @@
             ]
         },
         "Classroom": {
-            "Body": "CLASSROOM TEXT",
+            "Body": "The Classroom is in attendance, and most of the Academy is in session. The class is about piloting. <br> You wish you had done something cool, like piloting, but you also recognize that if you had done piloting, you probably would wish you had done something cool like Bio Science.",
             "Choices": [
                 {
                     "Text": "Go Facility Lobby",
@@ -192,7 +225,7 @@
             ]
         },
         "End": {
-            "Body": "END TEXT"
+            "Body": "With the manual you sucessfully recalibrate the engine. Now maybe something to eat? You feel tired even though you actually physically did very little."
         }
     }
 }
